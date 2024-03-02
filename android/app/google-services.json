@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "415792305127",
+    "project_id": "iot-hackathon-83df3",
+    "storage_bucket": "iot-hackathon-83df3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:415792305127:android:e44d434dec10fb8ac22342",
+        "android_client_info": {
+          "package_name": "com.example.iot_smart_street_light_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmgUYDal57podxXzHkXpy01nivT5-ojnM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

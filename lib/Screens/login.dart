@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:iot_smart_street_light_app/palats/color.dart';
-import 'package:iot_smart_street_light_app/Screens/signup.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -14,7 +13,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  var _isLogin = false;
+  var _isLogin = true;
   var _enteredEmail = "";
   var _enteredPassword = "";
   final _formkey = GlobalKey<FormState>();
@@ -31,11 +30,9 @@ class _LoginState extends State<Login> {
       if (_isLogin) {
         final userCredentials = await _firebase.signInWithEmailAndPassword(
             email: _enteredEmail, password: _enteredPassword);
-        print(userCredentials);
       } else {
         final userCredentials = await _firebase.createUserWithEmailAndPassword(
             email: _enteredEmail, password: _enteredPassword);
-        print(userCredentials);
       }
     } on FirebaseAuthException catch (error) {
       // only exceptions of type particular type will be caught and handled
@@ -62,10 +59,10 @@ class _LoginState extends State<Login> {
                   mainFrameColor5,
                 ]),
               ),
-              child: const Padding(
+              child:  Padding(
                 padding: EdgeInsets.only(top: 60.0, left: 22),
                 child: Text(
-                  'Hello\nSign in!',
+                  _isLogin ? 'Hello\nSign in!' : 'Create Your\nAccount',
                   style: TextStyle(
                       fontSize: 30,
                       // color: Colors.white,
@@ -93,7 +90,7 @@ class _LoginState extends State<Login> {
                         child: BackdropFilter(
                           filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
                           child: Form(
-                            //key: _formkey,
+                            key: _formkey,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -128,13 +125,13 @@ class _LoginState extends State<Login> {
                                    },
                                 ),
                                  TextFormField(
-                                  decoration: const InputDecoration(
+                                  decoration: InputDecoration(
                                       suffixIcon: Icon(
                                         Icons.visibility_off,
                                         color: Colors.grey,
                                       ),
                                       label: Text(
-                                        'Password',
+                                        _isLogin ? 'Password' : 'Set Password',
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: mainFrameColor5,
@@ -179,36 +176,30 @@ class _LoginState extends State<Login> {
                                 const SizedBox(
                                   height: 70,
                                 ),
-                                InkWell(
-                                  //InkWell widget is needed whenever you want a container to be tapAble
-                                  child: GestureDetector(
-                                    onTap: (){
-                                      _submit();
-                                    },
-                                    child: Container(
-                                      height: 55,
-                                      width: 300,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(30),
-                                        gradient: const LinearGradient(colors: [
-                                          mainFrameColor2,
-                                          mainFrameColor4,
-                                        ]),
-                                      ),
-                                      child: const Center(
-                                        child: Text(
-                                          'SIGN IN',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 20,
-                                              color: Colors.white),
-                                        ),
+                                GestureDetector(
+                                  onTap: (){
+                                    _submit();
+                                  },
+                                  child: Container(
+                                    height: 55,
+                                    width: 300,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(30),
+                                      gradient: const LinearGradient(colors: [
+                                        mainFrameColor2,
+                                        mainFrameColor4,
+                                      ]),
+                                    ),
+                                    child: const Center(
+                                      child: Text(
+                                        'SIGN IN',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20,
+                                            color: Colors.white),
                                       ),
                                     ),
                                   ),
-                                  onTap: () {
-
-                                  },
                                 ),
                                 const SizedBox(
                                   height: 150,
@@ -219,28 +210,24 @@ class _LoginState extends State<Login> {
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: [
-                                      const Text(
-                                        "Don't have account?",
+                                      Text(
+                                        _isLogin ? "Don't have account?" : "Already have an account",
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             color: Colors.grey),
                                       ),
                                       GestureDetector(
-                                        child: const Text(
-                                          "Sign up",
+                                        child: Text(
+                                          _isLogin ?"Sign up":"Sign in",
                                           style: TextStyle(
-
-                                              ///done login page
                                               fontWeight: FontWeight.bold,
                                               fontSize: 17,
                                               color: Colors.black),
                                         ),
                                         onTap: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      Signup()));
+                                          setState(() {
+                                            _isLogin = !_isLogin;
+                                          });
                                         },
                                       )
                                     ],

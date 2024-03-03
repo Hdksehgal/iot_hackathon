@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:in_app_notification/in_app_notification.dart';
+import 'package:iot_smart_street_light_app/Screens/Loading_screen.dart';
 
 import 'package:iot_smart_street_light_app/Screens/home_screen.dart';
 import 'package:iot_smart_street_light_app/Screens/login.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:iot_smart_street_light_app/Screens/signup.dart';
+// import 'package:iot_smart_street_light_app/Screens/signup.dart';
 import 'package:iot_smart_street_light_app/palats/color.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -34,14 +35,18 @@ class MyApp extends StatelessWidget {
         home: AnimatedSplashScreen(
           splash: Image.asset("assets/images/smart-light.png"),
           nextScreen: StreamBuilder(stream: FirebaseAuth.instance.authStateChanges(),builder: (ctx, snapshot) {
-            if(snapshot.hasData){
-              return HomeScreen();
+            if(snapshot.connectionState == ConnectionState.waiting){
+              return LoadingScreen();
             }
-            return Signup();
-          }),
+
+              if(snapshot.hasData){
+                return const HomeScreen();
+              }
+              return Login();
+            }),
         ),
-      ),
-    );
+        ),
+      );
   }
 }
 

@@ -3,6 +3,7 @@ import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 import 'package:iot_smart_street_light_app/Screens/login.dart';
 import 'package:iot_smart_street_light_app/widgets/faq.dart';
 import 'package:iot_smart_street_light_app/palats/color.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class DrawerView extends StatelessWidget {
   const DrawerView({super.key});
@@ -96,7 +97,7 @@ class DrawerView extends StatelessWidget {
               style: TextStyle(color: mainFrameColor3, fontSize: 18),
             ),
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => Login()));
+              FirebaseAuth.instance.signOut();
             },
           )
         ],

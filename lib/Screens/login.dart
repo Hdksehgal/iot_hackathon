@@ -179,6 +179,9 @@ class _LoginState extends State<Login> {
                                 GestureDetector(
                                   onTap: (){
                                     _submit();
+                                    setState(() {
+                                      _isLogin = !_isLogin;
+                                    });
                                   },
                                   child: Container(
                                     height: 55,
@@ -190,9 +193,9 @@ class _LoginState extends State<Login> {
                                         mainFrameColor4,
                                       ]),
                                     ),
-                                    child: const Center(
+                                    child: Center(
                                       child: Text(
-                                        'SIGN IN',
+                                        _isLogin ? "SIGN IN" : "SIGN UP",
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 20,

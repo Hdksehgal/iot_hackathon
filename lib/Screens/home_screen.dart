@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:iot_smart_street_light_app/Complaints/Screens/list_complaints.dart';
 import 'package:iot_smart_street_light_app/Screens/fused_lights.dart';
 import 'package:iot_smart_street_light_app/Screens/notifications.dart';
 import 'package:iot_smart_street_light_app/Screens/smartlight.dart';
+import 'package:iot_smart_street_light_app/Screens/sos.dart';
 import 'package:iot_smart_street_light_app/Screens/streetLight.dart';
 import 'package:iot_smart_street_light_app/widgets/drawer.dart';
 import 'package:iot_smart_street_light_app/palats/color.dart';
@@ -77,30 +79,31 @@ class HomeScreen extends StatelessWidget {
                 //     style: TextStyle(fontSize: 18, color: Colors.black54),
                 //   ),
                 // )),
-            // Container(
-            //     padding: const EdgeInsets.all(40),
-            //     decoration: const BoxDecoration(
-            //         gradient: LinearGradient(
-            //       colors: [Colors.white, mainFrameColor2],
-            //       begin: Alignment.topCenter,
-            //       end: Alignment.bottomCenter,
-            //     )),
-            //     child: ListTile(
-            //       leading: const Icon(
-            //         Icons.sos_outlined,
-            //         size: 60,
-            //         color: Colors.black54,
-            //       ),
-            //       onTap: () {
-            //         Navigator.push(context,
-            //             MaterialPageRoute(builder: (context) => sos()));
-            //       },
-            //       title: const Text(
-            //         "SOS Service",
-            //         textAlign: TextAlign.center,
-            //         style: TextStyle(fontSize: 18),
-            //       ),
-            //     )),
+            Container(
+                padding: const EdgeInsets.all(40),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                    gradient: LinearGradient(
+                  colors: clist,
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                )),
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.sos_outlined,
+                    size: 60,
+                    color: Colors.black54,
+                  ),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SOS()));
+                  },
+                  title: const Text(
+                    "SOS Service",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 18, color: Colors.black54),
+                  ),
+                )),
             Container(
                 padding: const EdgeInsets.all(40),
                 decoration:  BoxDecoration(

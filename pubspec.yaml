@@ -44,6 +44,7 @@ dependencies:
   in_app_notification: ^1.1.2
   firebase_auth: ^4.16.0
   firebase_core: ^2.25.5
+  flutter_phone_direct_caller: ^2.1.1
 #  qr_bar_code_scanner_dialog: ^0.0.5
 #  flutter_barcode_scanner: ^2.0.0
 #  ai_barcode_scanner: ^3.4.3

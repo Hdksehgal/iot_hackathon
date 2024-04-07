@@ -31,7 +31,8 @@ class HomeScreen extends StatelessWidget {
               mainAxisSpacing: 20), //crossAxis = no of columns
           children: <Widget>[
             Container(
-                padding: const EdgeInsets.all(40),
+                padding: const EdgeInsets.all(30),
+                margin: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     gradient: LinearGradient(
@@ -80,7 +81,8 @@ class HomeScreen extends StatelessWidget {
                 //   ),
                 // )),
             Container(
-                padding: const EdgeInsets.all(40),
+                padding: const EdgeInsets.all(30),
+                margin: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                     gradient: LinearGradient(
@@ -105,7 +107,8 @@ class HomeScreen extends StatelessWidget {
                   ),
                 )),
             Container(
-                padding: const EdgeInsets.all(40),
+                padding: const EdgeInsets.all(30),
+                margin: EdgeInsets.all(5),
                 decoration:  BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                     gradient: LinearGradient(
@@ -151,7 +154,8 @@ class HomeScreen extends StatelessWidget {
             //       ),
             //     )),
             Container(
-                padding:const EdgeInsets.all(40),
+                padding:const EdgeInsets.all(30),
+                margin: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     gradient: LinearGradient(
@@ -176,7 +180,8 @@ class HomeScreen extends StatelessWidget {
                   ),
                 )),
             Container(
-                padding: const EdgeInsets.all(40),
+                padding: const EdgeInsets.all(30),
+                margin: EdgeInsets.all(5),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     gradient: LinearGradient(

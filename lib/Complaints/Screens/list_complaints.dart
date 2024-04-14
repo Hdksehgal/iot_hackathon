@@ -19,7 +19,7 @@ class _CompListState extends State<CompList> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Complaints'),
+          title:const Text('Complaints'),
           actions: [
             IconButton(
               onPressed: () async {
@@ -29,7 +29,7 @@ class _CompListState extends State<CompList> {
                   _usedList = list;
                 });
               },
-              icon: Icon(Icons.add_rounded),
+              icon:const Icon(Icons.add_rounded),
             )
           ],
         ),
@@ -42,7 +42,7 @@ class _CompListState extends State<CompList> {
             : ListView.builder(
                 itemCount: _usedList.length,
                 itemBuilder: (context, index) => Card(
-                  margin: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+                  margin:const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                   child: ListTile(
                     //tileColor: Theme.of(context).colorScheme.tertiary,
                     title: Text(_usedList[index].subject),

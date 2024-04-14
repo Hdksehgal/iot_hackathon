@@ -89,7 +89,7 @@ class _FusedLightsState extends State<FusedLights>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fused Lights'),
+        title:const Text('Fused Lights'),
       ),
       body: ListView.builder(itemCount: fused.length ,itemBuilder: (ctx,index) => ListTile(
         title: Text("Light ${fused[index].lightNum}"),

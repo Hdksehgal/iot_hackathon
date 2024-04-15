@@ -1,18 +1,12 @@
-import 'dart:async';
-// import 'dart:html';
-
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:in_app_notification/in_app_notification.dart';
-import 'package:iot_smart_street_light_app/Data/dummy_data_notifications.dart';
-import 'package:iot_smart_street_light_app/Model/notification_model.dart';
-import 'package:iot_smart_street_light_app/palats/color.dart';
-import 'package:iot_smart_street_light_app/Data/dummy_data_lights.dart';
-import 'package:iot_smart_street_light_app/Model/Light_model.dart';
-import 'package:lottie/lottie.dart';
-import 'dart:io';
 import 'dart:core';
 
+import 'package:flutter/material.dart';
+import 'package:in_app_notification/in_app_notification.dart';
+import 'package:iot_smart_street_light_app/Data/dummy_data_lights.dart';
+import 'package:iot_smart_street_light_app/Data/dummy_data_notifications.dart';
+import 'package:iot_smart_street_light_app/Model/Light_model.dart';
+import 'package:iot_smart_street_light_app/Model/notification_model.dart';
+import 'package:lottie/lottie.dart';
 import 'package:weather/weather.dart';
 
 class StreetLight extends StatefulWidget {
@@ -231,7 +225,7 @@ class _StreetLightState extends State<StreetLight> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: _weather == null
               ? [
-                  Center(
+                  const Center(
                     child: CircularProgressIndicator(),
                   )
                 ]
@@ -243,10 +237,10 @@ class _StreetLightState extends State<StreetLight> {
                   Center(
                     child: Text(
                       "Weather : ${_weather!.weatherMain}\n Temp : ${_weather!.temperature}",
-                      style: TextStyle(fontWeight: FontWeight.w400),
+                      style: const TextStyle(fontWeight: FontWeight.w400),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Expanded(
@@ -255,11 +249,11 @@ class _StreetLightState extends State<StreetLight> {
                       itemBuilder: (context, index) => ListTile(
                           leading: IconButton(
                             icon: lights[index].status == Status.fused
-                                ? Icon(
+                                ? const Icon(
                                     Icons.build_outlined,
                                     color: Colors.grey,
                                   )
-                                : Icon(
+                                : const Icon(
                                     Icons.check_circle_outline_sharp,
                                     color: Colors.green,
                                   ),

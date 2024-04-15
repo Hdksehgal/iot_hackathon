@@ -1,14 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:iot_smart_street_light_app/Complaints/Screens/list_complaints.dart';
-import 'package:iot_smart_street_light_app/Screens/fused_lights.dart';
 import 'package:iot_smart_street_light_app/Screens/notifications.dart';
 import 'package:iot_smart_street_light_app/Screens/smartlight.dart';
 import 'package:iot_smart_street_light_app/Screens/sos.dart';
 import 'package:iot_smart_street_light_app/Screens/streetLight.dart';
-import 'package:iot_smart_street_light_app/widgets/drawer.dart';
 import 'package:iot_smart_street_light_app/palats/color.dart';
+import 'package:iot_smart_street_light_app/widgets/drawer.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -22,7 +19,7 @@ class HomeScreen extends StatelessWidget {
         title: const Text("IOT Street light system"),
         centerTitle: true,
       ),
-      drawer: const DrawerView(),
+      drawer: DrawerView(),
       body: GridView(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 1,
@@ -32,14 +29,14 @@ class HomeScreen extends StatelessWidget {
           children: <Widget>[
             Container(
                 padding: const EdgeInsets.all(30),
-                margin: EdgeInsets.all(5),
+                margin: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(
-                  colors: clist,
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                )),
+                    gradient: const LinearGradient(
+                      colors: clist,
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    )),
                 child: ListTile(
                   leading: const Icon(
                     Icons.light,
@@ -64,32 +61,32 @@ class HomeScreen extends StatelessWidget {
             //       begin: Alignment.topCenter,
             //       end: Alignment.bottomCenter,
             //     )),
-                // child: ListTile(
-                //   leading: const Icon(
-                //     Icons.flashlight_off_outlined,
-                //     size: 60,
-                //     color: Colors.black54,
-                //   ),
-                //   onTap: () {
-                //     Navigator.of(context).push(
-                //         MaterialPageRoute(builder: (ctx) => FusedLights()));
-                //   },
-                //   title: const Text(
-                //     "Fused Lights",
-                //     textAlign: TextAlign.center,
-                //     style: TextStyle(fontSize: 18, color: Colors.black54),
-                //   ),
-                // )),
+            // child: ListTile(
+            //   leading: const Icon(
+            //     Icons.flashlight_off_outlined,
+            //     size: 60,
+            //     color: Colors.black54,
+            //   ),
+            //   onTap: () {
+            //     Navigator.of(context).push(
+            //         MaterialPageRoute(builder: (ctx) => FusedLights()));
+            //   },
+            //   title: const Text(
+            //     "Fused Lights",
+            //     textAlign: TextAlign.center,
+            //     style: TextStyle(fontSize: 18, color: Colors.black54),
+            //   ),
+            // )),
             Container(
                 padding: const EdgeInsets.all(30),
-                margin: EdgeInsets.all(5),
+                margin: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(
-                  colors: clist,
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                )),
+                    borderRadius: BorderRadius.circular(20),
+                    gradient: const LinearGradient(
+                      colors: clist,
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    )),
                 child: ListTile(
                   leading: const Icon(
                     Icons.sos_outlined,
@@ -108,14 +105,14 @@ class HomeScreen extends StatelessWidget {
                 )),
             Container(
                 padding: const EdgeInsets.all(30),
-                margin: EdgeInsets.all(5),
-                decoration:  BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(
-                  colors: clist,
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                )),
+                margin: const EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    gradient: const LinearGradient(
+                      colors: clist,
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    )),
                 child: ListTile(
                   leading: const Icon(
                     Icons.note_alt_sharp,
@@ -154,15 +151,15 @@ class HomeScreen extends StatelessWidget {
             //       ),
             //     )),
             Container(
-                padding:const EdgeInsets.all(30),
-                margin: EdgeInsets.all(5),
+                padding: const EdgeInsets.all(30),
+                margin: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(
-                  colors: clist,
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                )),
+                    gradient: const LinearGradient(
+                      colors: clist,
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    )),
                 child: ListTile(
                   leading: const Icon(
                     Icons.smart_screen_outlined,
@@ -181,14 +178,19 @@ class HomeScreen extends StatelessWidget {
                 )),
             Container(
                 padding: const EdgeInsets.all(30),
-                margin: EdgeInsets.all(5),
+                margin: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    gradient: LinearGradient(
-                  colors: [Color.fromRGBO(247, 201, 101,1), Color.fromRGBO(234, 173, 38, 1),Color.fromRGBO(242, 158, 80, 1),Color.fromRGBO(255, 127, 77, 1)],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                )),
+                    gradient: const LinearGradient(
+                      colors: [
+                        Color.fromRGBO(247, 201, 101, 1),
+                        Color.fromRGBO(234, 173, 38, 1),
+                        Color.fromRGBO(242, 158, 80, 1),
+                        Color.fromRGBO(255, 127, 77, 1)
+                      ],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    )),
                 child: ListTile(
                   leading: const Icon(
                     Icons.notifications,
@@ -196,8 +198,8 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.black54,
                   ),
                   onTap: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (ctx) => NotificationList()));
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (ctx) => NotificationList()));
                   },
                   title: const Text(
                     "Notifications",

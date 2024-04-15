@@ -1,9 +1,8 @@
 import 'dart:ui';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:iot_smart_street_light_app/palats/color.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 final _firebase = FirebaseAuth.instance;
 
@@ -18,7 +17,7 @@ class _LoginState extends State<Login> {
   var _enteredPassword = "";
   final _formkey = GlobalKey<FormState>();
   // I KNOW THE CODE NEEDS TO BE OPTIMIZED TO A GREAT EXTENT AND I WILL DO IT FOR SURE
-
+  bool _obscureText = true;
   void _submit() async {
     final isValid = _formkey.currentState!.validate();
     if (!isValid) {
@@ -59,11 +58,11 @@ class _LoginState extends State<Login> {
                   mainFrameColor5,
                 ]),
               ),
-              child:  Padding(
+              child: Padding(
                 padding: EdgeInsets.only(top: 60.0, left: 22),
                 child: Text(
                   _isLogin ? 'Hello\nSign in!' : 'Create Your\nAccount',
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 30,
                       // color: Colors.white,
                       fontWeight: FontWeight.bold),
@@ -94,10 +93,10 @@ class _LoginState extends State<Login> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                 TextFormField(
+                                TextFormField(
                                   decoration: const InputDecoration(
                                       suffixIcon: Icon(
-                                        Icons.check,
+                                        Icons.mail_outline,
                                         color: Colors.grey,
                                       ),
                                       label: Text(
@@ -107,43 +106,54 @@ class _LoginState extends State<Login> {
                                           color: mainFrameColor5,
                                         ),
                                       )),
-                                   style: TextStyle(
-                                     color: Colors.black54,
-                                   ),
-                                   validator: (value){
-                                    if(value == null || value.trim().length < 4 ){
+                                  style: const TextStyle(
+                                    color: Colors.black54,
+                                  ),
+                                  validator: (value) {
+                                    if (value == null ||
+                                        value.trim().length < 4) {
                                       return "enter the email between of length 4 to 50";
                                     }
-                                    if(!value.trim().contains("@")){
+                                    if (!value.trim().contains("@")) {
                                       return "enter a valid email id";
                                     }
-                                   },
-                                   textCapitalization: TextCapitalization.none,
-                                   keyboardType: TextInputType.emailAddress,
-                                   onSaved: (value) {
+                                  },
+                                  textCapitalization: TextCapitalization.none,
+                                  keyboardType: TextInputType.emailAddress,
+                                  onSaved: (value) {
                                     _enteredEmail = value!;
-                                   },
+                                  },
                                 ),
-                                 TextFormField(
+                                TextFormField(
+                                  obscureText: _obscureText,
                                   decoration: InputDecoration(
-                                      suffixIcon: Icon(
-                                        Icons.visibility_off,
-                                        color: Colors.grey,
+                                      suffixIcon: IconButton(
+                                        icon: Icon(
+                                          _obscureText
+                                              ? Icons.visibility_off_outlined
+                                              : Icons.visibility_outlined,
+                                        ),
+                                        color: Colors.black54,
+                                        onPressed: () {
+                                          setState(() {
+                                            _obscureText = !_obscureText;
+                                          });
+                                        },
                                       ),
                                       label: Text(
                                         _isLogin ? 'Password' : 'Set Password',
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: mainFrameColor5,
                                         ),
                                       )),
-                                   style: TextStyle(color: Colors.black54),
-                                   validator: (value) {
-                                    if(value == null || value.trim().length < 8)
-                                      {
-                                        return "password length should be atleast 8";
-                                      }
-                                    if(value.contains(" ")){
+                                  style: const TextStyle(color: Colors.black54),
+                                  validator: (value) {
+                                    if (value == null ||
+                                        value.trim().length < 8) {
+                                      return "password length should be atleast 8";
+                                    }
+                                    if (value.contains(" ")) {
                                       return "password should not contain whitespaces";
                                     }
                                     if (!value
@@ -151,13 +161,12 @@ class _LoginState extends State<Login> {
                                         .contains(RegExp(r'[1-9]'))) {
                                       return "Try including some numbers in your password";
                                     }
-                                   },
-                                   onSaved: (value) {
+                                  },
+                                  onSaved: (value) {
                                     _enteredPassword = value!;
-                                   },
-                                   textCapitalization: TextCapitalization.none,
-                                   obscureText: true,
-
+                                  },
+                                  textCapitalization: TextCapitalization.none,
+                                  // obscureText: true,
                                 ),
                                 const SizedBox(
                                   height: 20,
@@ -177,7 +186,7 @@ class _LoginState extends State<Login> {
                                   height: 70,
                                 ),
                                 GestureDetector(
-                                  onTap: (){
+                                  onTap: () {
                                     _submit();
                                     setState(() {
                                       _isLogin = !_isLogin;
@@ -196,7 +205,7 @@ class _LoginState extends State<Login> {
                                     child: Center(
                                       child: Text(
                                         _isLogin ? "SIGN IN" : "SIGN UP",
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 20,
                                             color: Colors.white),
@@ -214,15 +223,17 @@ class _LoginState extends State<Login> {
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: [
                                       Text(
-                                        _isLogin ? "Don't have account?" : "Already have an account",
-                                        style: TextStyle(
+                                        _isLogin
+                                            ? "Don't have account?"
+                                            : "Already have an account",
+                                        style: const TextStyle(
                                             fontWeight: FontWeight.bold,
                                             color: Colors.grey),
                                       ),
                                       GestureDetector(
                                         child: Text(
-                                          _isLogin ?"Sign up":"Sign in",
-                                          style: TextStyle(
+                                          _isLogin ? "Sign up" : "Sign in",
+                                          style: const TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 17,
                                               color: Colors.black),

@@ -1,10 +1,10 @@
-import 'package:iot_smart_street_light_app/Complaints/Model/data_model.dart';
-import 'package:flutter/material.dart';
-import 'dart:io';
-import 'package:iot_smart_street_light_app/Complaints/Data/dummy_data.dart';
 import 'dart:core';
+import 'dart:io';
 
+import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:iot_smart_street_light_app/Complaints/Data/dummy_data.dart';
+import 'package:iot_smart_street_light_app/Complaints/Model/data_model.dart';
 
 // List<String> lights = [
 //   "Mohali Phase 1, Light 1",
@@ -67,18 +67,18 @@ class _FormScreenState extends State<FormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Raise a complaint'),
+        title: const Text('Raise a complaint'),
       ),
       body: SingleChildScrollView(
           child: Padding(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Form(
             key: _formkey,
             child: Column(
               children: [
                 TextFormField(
                   decoration: InputDecoration(
-                    label: Text('Subject'),
+                    label: const Text('Subject'),
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     fillColor:
                         Theme.of(context).copyWith().colorScheme.background,
@@ -121,7 +121,7 @@ class _FormScreenState extends State<FormScreen> {
 
                 TextFormField(
                   maxLines: 5,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     label: Text('Description'),
                     hintText: "Enter description here...",
                     border: OutlineInputBorder(),
@@ -141,7 +141,7 @@ class _FormScreenState extends State<FormScreen> {
                     _description = value!;
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
 
@@ -172,16 +172,16 @@ class _FormScreenState extends State<FormScreen> {
                           )
                         : TextButton.icon(
                             onPressed: _takePicture,
-                            icon: Icon(Icons.image_outlined),
-                            label: Text('Take Picture'))),
-                SizedBox(
+                            icon: const Icon(Icons.image_outlined),
+                            label: const Text('Take Picture'))),
+                const SizedBox(
                   height: 20,
                 ),
 
                 ElevatedButton.icon(
                   onPressed: _saveComplaint,
-                  icon: Icon(Icons.send_rounded),
-                  label: Text("Send request"),
+                  icon: const Icon(Icons.send_rounded),
+                  label: const Text("Send request"),
                 )
               ],
             )),

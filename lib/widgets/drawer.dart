@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
+import 'package:iot_smart_street_light_app/Screens/Setting/settings.dart';
 import 'package:iot_smart_street_light_app/palats/color.dart';
 import 'package:iot_smart_street_light_app/widgets/faq.dart';
 
@@ -56,7 +57,10 @@ class DrawerView extends StatelessWidget {
               "Settings",
               style: TextStyle(color: mainFrameColor3, fontSize: 18),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (ctx) => Settings()));
+            },
           ),
           ListTile(
             leading: const Icon(

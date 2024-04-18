@@ -46,8 +46,7 @@ class SOS extends StatelessWidget {
                   color: Colors.white.withOpacity(0.7),
                 ),
                 child: Padding(
-                  padding:
-                      const EdgeInsets.only(right: 18, left: 18, top: 15),
+                  padding: const EdgeInsets.only(right: 18, left: 18, top: 15),
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
                     child: SingleChildScrollView(

@@ -54,10 +54,9 @@ class myProfile extends StatelessWidget {
                     child: Column(
                       children: [
                         CircleAvatar(
-                          radius: 50,
-                          backgroundImage: NetworkImage(
-                              'https://private-user-images.githubusercontent.com/119584242/323701585-0cb9562a-042f-45ef-9cd6-df7b1b019673.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM0NzQ3MjAsIm5iZiI6MTcxMzQ3NDQyMCwicGF0aCI6Ii8xMTk1ODQyNDIvMzIzNzAxNTg1LTBjYjk1NjJhLTA0MmYtNDVlZi05Y2Q2LWRmN2IxYjAxOTY3My5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNDE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDQxOFQyMTA3MDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jZjIzOTUzNDk5MDAxNTI3NzI3NTA5NjVlYTI0ODIwNzg1NDVjY2UyMDgwZDMwYzQ3ZGEyMjRlM2FkMjliNjQ2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.-B20WplPxrcJrS8HptWdrbIp-hs5SIxuqKhLMXei450'),
-                        ),
+                            radius: 50,
+                            backgroundImage: AssetImage(
+                                "assets/images/20230221_091438.jpg")),
                         const SizedBox(height: 10),
                         Text(
                           "Name: Gaurav Kumar Biswas\nEmail: gauravbiswas123@gmail.com\nRole: Admin",

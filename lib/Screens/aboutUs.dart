@@ -53,10 +53,9 @@ class aboutUs extends StatelessWidget {
                       child: Column(
                         children: [
                           CircleAvatar(
-                            radius: 50,
-                            backgroundImage: NetworkImage(
-                                'https://private-user-images.githubusercontent.com/119584242/323701585-0cb9562a-042f-45ef-9cd6-df7b1b019673.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM0NzQ3MjAsIm5iZiI6MTcxMzQ3NDQyMCwicGF0aCI6Ii8xMTk1ODQyNDIvMzIzNzAxNTg1LTBjYjk1NjJhLTA0MmYtNDVlZi05Y2Q2LWRmN2IxYjAxOTY3My5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNDE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDQxOFQyMTA3MDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jZjIzOTUzNDk5MDAxNTI3NzI3NTA5NjVlYTI0ODIwNzg1NDVjY2UyMDgwZDMwYzQ3ZGEyMjRlM2FkMjliNjQ2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.-B20WplPxrcJrS8HptWdrbIp-hs5SIxuqKhLMXei450'),
-                          ),
+                              radius: 50,
+                              backgroundImage: AssetImage(
+                                  "assets/images/20230221_091438.jpg")),
                           SizedBox(height: 10),
                           Text(
                             "Gaurav Kumar Biswas\n3rd Year, Btech CSE, 2129651",
@@ -84,10 +83,9 @@ class aboutUs extends StatelessWidget {
                           ),
                           SizedBox(height: 20),
                           CircleAvatar(
-                            radius: 50,
-                            backgroundImage: NetworkImage(
-                                'https://private-user-images.githubusercontent.com/119584242/323701562-607c3111-89b8-462f-8a9f-e356ea8c49c3.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM0NzQ3MjAsIm5iZiI6MTcxMzQ3NDQyMCwicGF0aCI6Ii8xMTk1ODQyNDIvMzIzNzAxNTYyLTYwN2MzMTExLTg5YjgtNDYyZi04YTlmLWUzNTZlYThjNDljMy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNDE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDQxOFQyMTA3MDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01M2ZiNTgyZjVhMmFhN2UwNzFmYWEyNjkyODhlNDFhMWYzODIyODIzNzhmMzNhMjYwYWRkMmEwZGFhN2MxZWE3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.EGf1ctWGhYWJGNuyGAMQKhD7Rd3B2ee9H3DR8KIFtno'),
-                          ),
+                              radius: 50,
+                              backgroundImage: AssetImage(
+                                  "assets/images/WhatsApp Image 2024-04-18 at 22.50.23_a4034c1c.jpg")),
                           const SizedBox(height: 10),
                           Text(
                             "Hardik\n3rd Year, Btech CSE, 2129653",

@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("IOT Street light system"),
+        title: const Text("IoT Street light system"),
         centerTitle: true,
       ),
       drawer: DrawerView(),
@@ -24,14 +24,23 @@ class HomeScreen extends StatelessWidget {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 1,
               childAspectRatio: 3,
-              crossAxisSpacing: 20, //spacing btwn the columns
-              mainAxisSpacing: 20), //crossAxis = no of columns
+              mainAxisSpacing: 1), //crossAxis = no of columns
           children: <Widget>[
             Container(
-                padding: const EdgeInsets.all(30),
-                margin: const EdgeInsets.all(5),
+                padding: const EdgeInsets.all(20),
+                margin: const EdgeInsets.all(17),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(35),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? const Color.fromARGB(255, 199, 191, 131)
+                            : Colors.black54,
+                        offset: const Offset(2, 5),
+                        blurRadius: 10,
+                        spreadRadius: 0.8,
+                      )
+                    ],
                     gradient: const LinearGradient(
                       colors: clist,
                       begin: Alignment.topCenter,
@@ -53,35 +62,21 @@ class HomeScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 18, color: Colors.black54),
                   ),
                 )),
-            // Container(
-            //     padding: const EdgeInsets.all(40),
-            //     decoration: const BoxDecoration(
-            //         gradient: LinearGradient(
-            //       colors: [ Colors.white, mainFrameColor2],
-            //       begin: Alignment.topCenter,
-            //       end: Alignment.bottomCenter,
-            //     )),
-            // child: ListTile(
-            //   leading: const Icon(
-            //     Icons.flashlight_off_outlined,
-            //     size: 60,
-            //     color: Colors.black54,
-            //   ),
-            //   onTap: () {
-            //     Navigator.of(context).push(
-            //         MaterialPageRoute(builder: (ctx) => FusedLights()));
-            //   },
-            //   title: const Text(
-            //     "Fused Lights",
-            //     textAlign: TextAlign.center,
-            //     style: TextStyle(fontSize: 18, color: Colors.black54),
-            //   ),
-            // )),
             Container(
-                padding: const EdgeInsets.all(30),
-                margin: const EdgeInsets.all(5),
+                padding: const EdgeInsets.all(20),
+                margin: const EdgeInsets.all(17),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(35),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? const Color.fromARGB(255, 199, 191, 131)
+                            : Colors.black54,
+                        offset: const Offset(2, 5),
+                        blurRadius: 10,
+                        spreadRadius: 0.8,
+                      )
+                    ],
                     gradient: const LinearGradient(
                       colors: clist,
                       begin: Alignment.topCenter,
@@ -104,10 +99,20 @@ class HomeScreen extends StatelessWidget {
                   ),
                 )),
             Container(
-                padding: const EdgeInsets.all(30),
-                margin: const EdgeInsets.all(5),
+                padding: const EdgeInsets.all(20),
+                margin: const EdgeInsets.all(17),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(35),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? const Color.fromARGB(255, 199, 191, 131)
+                            : Colors.black54,
+                        offset: const Offset(2, 5),
+                        blurRadius: 10,
+                        spreadRadius: 0.8,
+                      )
+                    ],
                     gradient: const LinearGradient(
                       colors: clist,
                       begin: Alignment.topCenter,
@@ -129,32 +134,21 @@ class HomeScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 18, color: Colors.black54),
                   ),
                 )),
-            // Container(
-            //     padding: const EdgeInsets.all(40),
-            //     decoration: const BoxDecoration(
-            //         gradient: LinearGradient(
-            //       colors: [Colors.white, mainFrameColor2],
-            //       begin: Alignment.topCenter,
-            //       end: Alignment.bottomCenter,
-            //     )),
-            //     child: ListTile(
-            //       leading: const Icon(
-            //         Icons.home_repair_service_outlined,
-            //         size: 60,
-            //         color: Colors.black54,
-            //       ),
-            //       onTap: () {},
-            //       title: const Text(
-            //         "Request Repair",
-            //         textAlign: TextAlign.center,
-            //         style: TextStyle(fontSize: 18),
-            //       ),
-            //     )),
             Container(
-                padding: const EdgeInsets.all(30),
-                margin: const EdgeInsets.all(5),
+                padding: const EdgeInsets.all(20),
+                margin: const EdgeInsets.all(17),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(35),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? const Color.fromARGB(255, 199, 191, 131)
+                            : Colors.black54,
+                        offset: const Offset(2, 5),
+                        blurRadius: 10,
+                        spreadRadius: 0.8,
+                      )
+                    ],
                     gradient: const LinearGradient(
                       colors: clist,
                       begin: Alignment.topCenter,
@@ -177,10 +171,20 @@ class HomeScreen extends StatelessWidget {
                   ),
                 )),
             Container(
-                padding: const EdgeInsets.all(30),
-                margin: const EdgeInsets.all(5),
+                padding: const EdgeInsets.all(20),
+                margin: const EdgeInsets.all(17),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(35),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? const Color.fromARGB(255, 199, 191, 131)
+                            : Colors.black54,
+                        offset: const Offset(2, 5),
+                        blurRadius: 10,
+                        spreadRadius: 0.8,
+                      )
+                    ],
                     gradient: const LinearGradient(
                       colors: [
                         Color.fromRGBO(247, 201, 101, 1),

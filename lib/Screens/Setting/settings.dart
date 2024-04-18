@@ -119,10 +119,11 @@ class _SettingsState extends State<Settings> {
                       child: Column(
                         children: [
                           SizedBox(
-                            height: 315, // Set the height of the GridView
+                            height: 350,
+                            width: 350, // Set the height of the GridView
                             child: GridView.count(
-                                mainAxisSpacing: 10,
-                                crossAxisSpacing: 10,
+                                mainAxisSpacing: 20,
+                                crossAxisSpacing: 20,
                                 crossAxisCount: 2, // Set the number of columns
                                 children: [
                                   Container(

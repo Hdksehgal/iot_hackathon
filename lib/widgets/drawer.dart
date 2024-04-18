@@ -1,9 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
-import 'package:iot_smart_street_light_app/Screens/login.dart';
-import 'package:iot_smart_street_light_app/widgets/faq.dart';
 import 'package:iot_smart_street_light_app/palats/color.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:iot_smart_street_light_app/widgets/faq.dart';
 
 class DrawerView extends StatelessWidget {
   const DrawerView({super.key});
@@ -17,17 +16,17 @@ class DrawerView extends StatelessWidget {
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
                   gradient: LinearGradient(
-                      colors: [mainFrameColor,mainFrameColor2],
+                      colors: [mainFrameColor, mainFrameColor2],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter)),
               child: Row(
                 children: [
                   ProfilePicture(
-                    name: "Hardik",
+                    name: "Gaurav",
                     radius: 40,
                     fontsize: 28,
                     random: false,
-                    tooltip:true,
+                    tooltip: true,
                     role: "",
                   ),
                   SizedBox(

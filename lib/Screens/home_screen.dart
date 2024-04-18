@@ -25,13 +25,13 @@ class HomeScreen extends StatelessWidget {
               crossAxisCount: 1,
               childAspectRatio: 3,
               crossAxisSpacing: 20, //spacing btwn the columns
-              mainAxisSpacing: 20), //crossAxis = no of columns
+              mainAxisSpacing: 1), //crossAxis = no of columns
           children: <Widget>[
             Container(
                 padding: const EdgeInsets.all(30),
-                margin: const EdgeInsets.all(5),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(35),
                     gradient: const LinearGradient(
                       colors: clist,
                       begin: Alignment.topCenter,
@@ -79,9 +79,9 @@ class HomeScreen extends StatelessWidget {
             // )),
             Container(
                 padding: const EdgeInsets.all(30),
-                margin: const EdgeInsets.all(5),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(35),
                     gradient: const LinearGradient(
                       colors: clist,
                       begin: Alignment.topCenter,
@@ -105,9 +105,9 @@ class HomeScreen extends StatelessWidget {
                 )),
             Container(
                 padding: const EdgeInsets.all(30),
-                margin: const EdgeInsets.all(5),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(35),
                     gradient: const LinearGradient(
                       colors: clist,
                       begin: Alignment.topCenter,
@@ -152,9 +152,9 @@ class HomeScreen extends StatelessWidget {
             //     )),
             Container(
                 padding: const EdgeInsets.all(30),
-                margin: const EdgeInsets.all(5),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(35),
                     gradient: const LinearGradient(
                       colors: clist,
                       begin: Alignment.topCenter,
@@ -178,9 +178,9 @@ class HomeScreen extends StatelessWidget {
                 )),
             Container(
                 padding: const EdgeInsets.all(30),
-                margin: const EdgeInsets.all(5),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(35),
                     gradient: const LinearGradient(
                       colors: [
                         Color.fromRGBO(247, 201, 101, 1),
